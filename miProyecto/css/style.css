@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Satisfy&display=swap');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Satisfy', cursive;
+*/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    height: 250px;
+    border: 1px solid #000;
+    box-shadow: 1px 3px 5px #000;
+}
+.intro,nav,footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.intro{
+    background-color: #000;
+    color: #fff;
+    height: 80%;    
+}
+h1{
+    font-family: 'Satisfy', cursive;
+    font-size: 4em;
+}
+nav{
+    height: 20%;
+    justify-content: space-evenly;
+}
+.menu{
+    color: chocolate;
+    border: 2px solid chocolate;
+    padding: 5px 15px;
+    border-radius: 10%;
+    text-decoration: none;
+}
+.menu:hover{
+    background-color: #000;
+    color: chocolate;
+}
+footer{
+    background-color: #000;
+    color: #fff;
+    height: 30px;
+    position: fixed;
+    bottom: 1px;
+    width: 100%;
+}
