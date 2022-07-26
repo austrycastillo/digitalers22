@@ -1,0 +1,35 @@
+	int cantidadNotas;
+		double notas[];
+		String[] nombre;
+		Scanner t = new Scanner(System.in);
+		System.out.println("Escribe cantidad de notas");
+		cantidadNotas = t.nextInt();
+		nombre = new String[cantidadNotas];
+		notas = new double[cantidadNotas];
+		// carga la info
+		for (int i = 0; i < cantidadNotas; i++) {
+			System.out.println("Nombre del alumno ");
+			nombre[i] = t.next();
+			System.out.println("Escribe la nota para " + nombre[i]);
+			notas[i] = t.nextDouble();
+		}
+		// calcular
+		double suma = 0;
+		double mayor = notas[0], menor = notas[0];
+		int indiceMayor = 0, indiceMenor = 0;
+		for (int i = 0; i < cantidadNotas; i++) {
+			suma += notas[i];
+			if (notas[i] > mayor) {
+				mayor = notas[i];
+				indiceMayor = i;
+			}
+			if (notas[i] < menor) {
+				menor = notas[i];
+				indiceMenor = i;
+			}
+		}
+		System.out.println("El promedio es " + (suma / cantidadNotas));
+		System.out.println("La mayor nota es de " + nombre[indiceMayor] 
+				+ " con " + notas[indiceMayor]);
+		System.out.println("La menor nota es de " + nombre[indiceMenor] 
+				+ " con " + notas[indiceMenor]);
