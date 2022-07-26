@@ -88,10 +88,18 @@ DELETE FROM piezas WHERE codigo = 4;
 #obtener el precio medio al que se nos sumnistra las piezas
 SELECT codigopieza, AVG(precio) FROM suministra;
 #obtener los nombres de los proveedores que sumnistran la pieza 1
+#SELECT CON INNER JOIN
 SELECT p.nombre FROM proveedores as p
 	INNER JOIN suministra as s
     ON p.id = s.idproveedor
     AND s.codigopieza = 1;
+#SELECT CON SUBCONSULTA
+SELECT nombre FROM proveedores WHERE id = 
+	(SELECT idproveedor FROM suministra WHERE codigopieza = 1);
+SELECT nombre FROM proveedores WHERE id IN 
+	(SELECT idproveedor FROM suministra WHERE codigopieza = 1);
+
+
 DROP TABLE suministra;
 SELECT *FROM piezas;
 DROP TABLE piezas;
@@ -102,4 +110,31 @@ DROP TABLE piezas;
     ("mesa");
 DELETE FROM piezas;
 TRUNCATE TABLE piezas;
+
+/*
+DML
+	INSERT INTO MI_TABLA (CAMPOS) VALUES (VALOR);
+	SELECT *FROM MI_TABLA;
+	UPDATE MI_TABLA SET CAMPO=VALOR;  //NO OLVIDAR EL WHERE
+	DELETE FROM MI_TABLA; //NO OLVIDAR EL WHERE
+*/
+
+/*aumentar los precios un 20%*/
+UPDATE suministra SET precio = precio *1.20;
+SELECT *FROM suministra;
+/*eliminar el provedor 1A*/
+DELETE FROM suministra WHERE idproveedor = '1A';
+/*hacer una consulta de las tres tablas relacionadas*/
+SELECT p.nombre as 'NOMBRE DE PIEZA',pr.nombre as 'NOMBRE PROVEEDOR',
+	s.precio FROM piezas as p 
+	INNER JOIN (suministra as s INNER JOIN proveedores pr
+    ON s.idproveedor = pr.id)
+    ON p.codigo = s.codigopieza
+    WHERE precio IN(216);
+
+
+
+
+
+
  
