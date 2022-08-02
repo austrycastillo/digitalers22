@@ -1,0 +1,103 @@
+1)
+Implementa la clase Bicicleta, que tiene tres atributos,
+velocidadActual, platoActual y piñonActual, de tipo
+entero y cuatro métodos acelerar(), frenar(),
+cambiarPlato(int plato), y cambiarPiñon(int
+piñon), donde el primero dobla la velocidad actual, el segundo
+reduce a la mitad la velocidad actual, y el tercero y cuarto ajustan
+el plato y el piñón actual respectivamente según los parámetros
+recibidos. La clase debe tener además un constructor que inicialice
+todos los atributos.
+• Crea dos objetos de la clase bicicleta: miBicicleta y
+tuBicicleta
+
+2)
+Sobre la clase Bicicleta, implementa los
+método sobrecargados cambiarPlato(), y
+cambiarPiñon(), que no reciben argumentos y
+que cambian el plato actual y el piñón actual a
+un valor por defecto, en concreto, 1.
+
+Sobre la clase Bicicleta, implementa un
+constructor adicional que no recibe parámetros
+y que inicializa la velocidad actual a 0, y el
+plato actual y el piñón actual a 1.
+
+
+
+
+
+
+
+
+
+
+3)
+Sobre la clase Bicicleta, implementa los
+métodos get() y set()necesarios para poder
+acceder y modificar todos los atributos.
+
+
+
+
+
+4)
+Partiendo de la clase Bicicleta, la cual tiene tres atributos,
+velocidadActual, platoActual y piñonActual,
+de tipo entero y cuatro métodos acelerar(), frenar(),
+cambiarPlato(int plato), y cambiarPiñon(int
+piñon), implementa las clases BicicletaMontaña y
+BicicletaTandem.
+• BicicletaMontaña tiene un atributo suspension de
+tipo entero y un método cambiarSuspension(int
+suspension)
+• BicicletaTandem tiene un atributo numAsientos de
+tipo entero.
+• Crear los constructores de estas clases para inicializar todos
+sus atributos, haciendo uso de super
+
+
+
+
+5)
+Sobreescribe el método acelerar(), de Bicicleta, en las
+subclases BicicletaMontaña y BicicletaTandem, de
+tal forma que en la primera acelerar suponga triplicar la velocidad
+actual y en la segunda cuadruplicar la velocidad actual.
+• Crea dos objetos de las clases BicicletaMontaña y
+BicicletaTandem e invoca sobre ellos el método
+acelerar(), ¿cuál es el resultado?
+• Desde estos objetos que has creado, ¿cómo accederías a la
+implementación del método acelerar(), en la clase
+Bicicleta?
+
+
+
+
+
+
+
+6)
+Crea un array de la clase Bicicleta, que contenga objetos
+de las clases Bicicleta, BicicletaMontaña y
+BicicletaTandem
+• Invoca el método acelerar() sobre cada uno de los
+objetos aprovechando las propiedades de polimorfismo
+
+
+7)
+Partiendo de la clase Bicicleta, la cual tiene tres
+atributos, velocidadActual, platoActual y
+piñonActual, de tipo entero y cuatro métodos
+acelerar(), frenar(), cambiarPlato(int
+plato), y cambiarPiñon(int piñon), implementa
+la clase abstracta Vehículo, la cual será una superclase de
+Bicicleta
+• Piensa qué atributos y métodos serán propios de
+Bicicleta y cuáles pueden heredarse de Vehículo,
+teniendo en cuenta que además de Bicicleta existirán
+las subclases Coche y Camión
+• Piensa qué métodos deben ser abstractos y cuáles no en la
+clase Vehículo
+
+
